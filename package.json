@@ -1,0 +1,40 @@
+{
+  "name": "wordation",
+  "description": "Wordation",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AmmoCan/wordation"
+  },
+  "author": "AmmoCan",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/AmmoCan/wordation/issues"
+  },
+  "homepage": "https://github.com/AmmoCan/wordation",
+  "dependencies": {
+    "foundation-sites": "^6.3.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "browser-sync": "^2.12.5",
+    "del": "^2.2.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-notify": "^3.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-svg-sprite": "^1.2.19",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-uglify": "^2.1.2",
+    "jshint": "^2.9.4"
+  }
+}

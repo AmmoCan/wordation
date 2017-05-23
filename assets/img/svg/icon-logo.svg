@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" class="logo rotate" aria-labelledby="title desc" role="img">
+  <title id="title">Vets on point logo</title>
+  <desc id="desc">A customized location icon, where the top rounded part is broken up into four circular blocks with the north star in the center, creating a compass, and the bottom pointed end is turned into a stencil looking letter 'V'.</desc>
+  <a xlink:href="#site-logo" tabindex="0" role="link">
+  <g id="letter-v">
+  	<path class="lt-side" d="M111.8,215h-1.2l145.6,289.9l24.9-53l-76.5-150.8C162.9,286.7,129.2,255,111.8,215z"/>
+  	<path class="rt-side" d="M398.8,215h1.2L287.7,439.8l-26.4-51.7l44.7-87.1C347.7,286.7,381.4,255,398.8,215z"/>
+  </g>
+  <g id="sm-star">
+  	<polygon class="tp-left" points="234.5,131.9 235.5,120.6 192.9,90.3 223.8,132.9"/>
+  	<polygon class="tp-right" points="277.9,131.9 276.9,120.6 319.5,90.3 288.6,132.9"/>
+  	<polygon class="btm-lt" points="234.5,173.8 235.5,185.2 192.9,215.5 223.8,172.9"/>
+  	<polygon class="btm-rt" points="277.9,173.8 276.9,185.2 319.5,215.5 288.6,172.9"/>
+  </g>
+  <g id="lrg-star">
+  	<path class="top-right" d="M272.2,52.9c43.1,7.1,77,41.4,83.6,84.6l44.2,3.9C394.4,71,338.5,14.7,268.3,8.6L272.2,52.9z"/>
+  	<path class="top-left" d="M155.2,137.5c6.6-43.4,40.8-77.8,84.1-84.7l4.1-44.3c-70.5,5.9-126.7,62.2-132.3,132.8L155.2,137.5z"/>
+  	<path class="bottom-left" d="M239.1,253.2c-42.5-6.9-76.1-40.3-83.5-82.6l-44.4-4.1c6.4,69.7,62.1,125.1,132,131L239.1,253.2z"/>
+  	<path class="bottom-right" d="M355.4,170.5c-7.3,42.3-40.8,75.5-83.1,82.6l-3.9,44.3c69.6-6.1,125-61.5,131.4-131.1L355.4,170.5z"/>
+
+  	<path class="top" d="M256.2,8l12,133.7c0,0-4.4-4.8-11.9-4.8c-7.5,0-11.9,4.9-11.9,4.9L256.2,8z"/>
+  	<path class="bottom" d="M256.2,298l12-132.5c0,0-3.8,4.8-12,4.8c-7.8,0-11.9-4.9-11.9-4.9L256.2,298z"/>
+  	<path class="right" d="M400.4,153.6l-132.2-11.9c0,0,4.8,4.2,4.8,12c0,8.2-4.8,12-4.8,12L400.4,153.6z"/>
+  	<path class="left" d="M110.6,153.6l133.7-11.9c0,0-4.9,4.3-4.9,11.9c0,7.7,4.9,11.9,4.9,11.9L110.6,153.6z"/>
+  </g>
+  </a>
+</svg>

@@ -1,0 +1,62 @@
+// This is the Sass file to the custom login-styled page
+
+// Login primary color variable
+$login-color: #404000;
+// Login text color variable
+$login-text: #FFFFFF;
+
+// Page background color/image
+body.login {
+	background: $login-color; /* Old browsers */
+  background: -moz-linear-gradient(top, $login-text 0%, $login-color 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $login-text 0%, $login-color 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $login-text 0%, $login-color 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$login-text', endColorstr='$login-color', GradientType=0 ); /* IE6-9 */
+}
+
+// Login logo goes here
+.login h1 a {
+	background-image: url(../../img/wordation-login.png);
+	background-size: contain;
+	height: 84px;
+	width: 320px;
+}
+
+// Login message border color
+.login #login_error,
+.login .message { border-color: darken($login-color, 10%); }
+
+// Login button styling
+#wp-submit {
+	background: $login-color;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	text-shadow: none;
+	text-transform: uppercase;
+	transition: all 300ms ease-in-out;
+
+  &:hover {
+    background: darken($login-color, 10%);
+    border: none;
+    box-shadow: none;
+  }
+}
+
+// Text styling for 'lost your password'
+.login #nav a {
+	color: $login-text;
+
+  &:hover {
+    color: $login-text;
+  }
+}
+
+// Text styling for 'back to wordation'
+.login #backtoblog a {
+	color: $login-text;
+
+  &:hover {
+    color: $login-text;
+  }
+}

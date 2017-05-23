@@ -1,0 +1,141 @@
+// FOUC fix for responsive navigation
+.no-js .top-bar { display: none; }
+
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+  @include breakpoint(large) {
+    .title-bar {
+      display: none;
+    }
+  }
+}
+
+// Fixes for sticky nav bar
+#site-navigation { width: 100%; }
+.sticky.is-anchored { position: fixed; }
+
+// Navigation variables
+$topbar-bg: rgba($black, .9);
+$topbar-animation-type: fade-in; // or use slide-down or none
+
+// Background color and padding for nav bar
+.topbar-responsive {
+  background: $topbar-bg;
+  padding: 0 0.9375rem;
+  // Color and alignment for logo and brand
+  .topbar-responsive-logo {
+    color: $white;
+    vertical-align: middle;
+  }
+  // Background color for both mobile and non-mobile menu
+  .menu {
+    background: $topbar-bg;
+    @include breakpoint(large up) {
+      background: transparent;
+    }
+    // No right margin for last menu item
+    li:last-of-type {
+      margin-right: 0;
+    }
+    // Menu item color and animation
+    a {
+      color: $white;
+      line-height: 1.25;
+      transition: color 0.15s ease-in;
+      &:hover {
+        color: lighten($topbar-bg, 60%);
+      }
+      // Padding for mobile menu item
+      @include breakpoint(medium down) {
+        padding: 0.875rem 0.5rem;
+      }
+    }
+  }
+  // Mobile menu nav bar
+  @include breakpoint(medium down) {
+    padding: 0.75rem;
+    .top-bar-title {
+      position: relative;
+      width: 100%;
+      // Mobile menu icon container border and position
+      span {
+        border: 1px solid $white;
+        border-radius: 5px;
+        padding: 0.25rem 0.45rem;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        // Mobile menu icon color and margin
+        .menu-icon {
+          margin-bottom: 4px;
+          &::after {
+            background: $primary-color;
+            box-shadow: 0 7px 0 $primary-color, 0 14px 0 $primary-color;
+          }
+          &:hover::after {
+            background: lighten($primary-color, 60%);
+            box-shadow: 0 7px 0 lighten($primary-color, 60%), 0 14px 0 lighten($primary-color, 60%);
+          }
+        }
+      }
+    }
+  }
+}
+// FadeIn animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+// SlideDown animation
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+// Animation for mobile menu
+@include breakpoint(medium down) {
+  .topbar-responsive-links {
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+    width: 100%;
+    // Conditional statement for animation
+    @if $topbar-animation-type == slide-down {
+      animation: slideDown 1s ease-in;
+    } @else if $topbar-animation-type == fade-in {
+      animation: fadeIn 1s ease-in;
+    } @else {
+      animation: none;
+    }
+  }
+  // Color for mobile accordion submenu control when item is active
+  .active.is-accordion-submenu-parent>a::after {
+    border-color: lighten($primary-color, 60%) transparent transparent;
+  }
+  // Padding for mobile submenu item
+  .is-accordion-submenu { padding-left: 1rem; }
+}
+// Active state for non-mobile menu items
+.menu .active>a {
+  @include breakpoint(large up) {
+    background: transparent;
+    border-bottom: 1px solid $primary-color;
+  }
+}
+// Background color and position of non-mobile submenu
+.dropdown.menu.large-horizontal>li.opens-left>.is-dropdown-submenu {
+  background: #000000;
+  top: 100%;
+}
+// Padding for non-mobile submenu item
+.is-dropdown-submenu .is-dropdown-submenu-item a { padding-left: 1rem; }

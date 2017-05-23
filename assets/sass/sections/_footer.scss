@@ -1,0 +1,53 @@
+// Footer styling
+#colophon {
+	background: lighten($black, 8%);
+	color: transparentize($white, .2);
+  #widget-wrap { padding-top: .9375rem; }
+  #site-info-wrap {
+    background: $black;
+    color: $white;
+    max-width: 100%;
+    padding: .9375rem 0;
+    #footer-links {
+      text-align: right;
+      #footer-icons {
+        display: inline-block;
+        margin: 4px 30px 4px 0;
+        ul {
+          border: 0;
+          font-size: 100%;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          vertical-align: baseline;
+          li { display: inline-block; padding-left: 1rem; }
+        }
+      }
+    }
+  }
+}
+
+ul.social-icons li a span {
+  border: 1px solid $primary-color;
+  border-radius: 50%;
+  display: inline-block;
+  height: 30px;
+  line-height: 1.8;
+  padding: 0;
+  text-align: center;
+  width: 30px;
+}
+
+#footer-links a, #footer-links a.to-top { color: $primary-color; }
+
+#footer-links a.to-top {
+  border: 1px solid $primary-color;
+  border-radius: 2px;
+  float: right;
+  height: 38px;
+  line-height: 2.2;
+  text-align: center;
+  width: 38px;
+}
+
+.fa-angle-up:before { content: "\f106"; }

@@ -1,0 +1,5 @@
+// Button styling
+input[type="submit"],
+input[type="button"] {
+	@include button;
+}
